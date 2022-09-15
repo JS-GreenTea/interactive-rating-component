@@ -85,12 +85,26 @@
       color: hsl(216, 12%, 54%);
     }
 
+    .number-rate > button:hover {
+      color: white;
+      background-color: hsl(25, 97%, 53%);
+    }
+
+    .number-rate .clicked {
+      color: white;
+      background-color: hsl(217, 12%, 63%);
+    }
+
     .card-submit {
       color: white;
       background-color: hsl(25, 97%, 53%);
       padding: 17px 0;
       border-radius: 10000px;
       border: none;
+    }
+    .card-submit:hover {
+      color: hsl(25, 97%, 53%);
+      background-color: white;
     }
   </style>
 </head>
@@ -129,6 +143,21 @@
       don’t hesitate to get in touch!
     </div>
   </section>
-</body>
+  <script>
+    let numberButtons = document.querySelectorAll('.number-rate > button');
 
+    numberButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        removeClickedClass();
+        button.classList.add('clicked');
+      });
+    });
+
+    const removeClickedClass = () => {
+      numberButtons.forEach(button => {
+        button.classList.remove('clicked');
+      });
+    };
+  </script>  
+</body>
 </html>
