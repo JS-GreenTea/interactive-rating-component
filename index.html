@@ -125,7 +125,7 @@
 </head>
 
 <body>
-  <section class="card" >
+  <section class="card" id="rate-section">
     <img src="./images/icon-star.svg" alt="" class="img-star">
     <div class="card-title">
         How did we do?
@@ -145,7 +145,7 @@
     <button class="card-submit">SUBMIT</button>
   </section>
 
-  <section class="card card-center" style="display: none;">
+  <section class="card card-center" id="thankyou-section" style="display: none;">
     <img src="./images/illustration-thank-you.svg" alt="" class="img-thankyou">
     <div class="card-primary-text">
       You selected
@@ -160,11 +160,14 @@
   </section>
   <script>
     let numberButtons = document.querySelectorAll('.number-rate > button');
+    let submitButton = document.querySelector('.card-submit');
+    let selectedNumber = 0
 
-    numberButtons.forEach(button => {
+    numberButtons.forEach((button, i) => {
       button.addEventListener('click', () => {
         removeClickedClass();
         button.classList.add('clicked');
+        selectedNumber = i + 1;
       });
     });
 
@@ -173,6 +176,17 @@
         button.classList.remove('clicked');
       });
     };
+
+    submitButton.addEventListener('click', () => {
+
+      if (selectedNumber === 0) {
+        return
+      }
+      document.querySelector('.card-primary-text').append(` ${selectedNumber} out of 5`);
+      document.getElementById('rate-section').style.display = 'none';
+      document.getElementById('thankyou-section').style.display = 'flex';
+
+    });
   </script>  
 </body>
 </html>
