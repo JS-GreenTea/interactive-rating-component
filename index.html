@@ -39,8 +39,6 @@
       .card {
         width: 40%;
         max-width: 23.5em;
-        height: 40%;
-        max-height: 23.5em;
       }
 
     }
@@ -48,14 +46,19 @@
     @media only screen and (min-width: 375px) {
       .card {
         width: 23.5em;
-        height: 23.5em;
       }
+    }
+
+    .card-center {
+      align-items: center;
+      text-align: center;
     }
 
     .card-title {
       font-size: 22px;
       color: white;
       font-weight: 700;
+      margin-bottom: 5px;
     }
 
     .card-content {
@@ -63,17 +66,22 @@
       line-height: 1.6em;
     }
 
-    .img-cover {
+    .img-star {
       background-color: hsl(216, 8%, 24%);
       padding: 15px;
       border-radius: 10000px;
       width: calc(3.5em - 30px);
       height: calc(3.5em - 30px);
+      margin-bottom: 35px;
+    }
+    .img-thankyou {
+      width: 10em;
     }
 
     .number-rate {
       display: flex;
       justify-content: space-between;
+      margin: 20px 0;
     }
 
     .number-rate>button {
@@ -106,16 +114,23 @@
       color: hsl(25, 97%, 53%);
       background-color: white;
     }
+    .card-primary-text {
+      color: hsl(25, 97%, 53%);
+      background-color: hsl(216, 8%, 24%);
+      padding: 5px 10px;
+      border-radius: 10000px;
+      margin: 20px 0;
+    }
   </style>
 </head>
 
 <body>
-  <section class="card">
-    <img src="./images/icon-star.svg" alt="" class="img-cover">
-    <div class="card-title"">
+  <section class="card" >
+    <img src="./images/icon-star.svg" alt="" class="img-star">
+    <div class="card-title">
         How did we do?
       </div>
-      <div class=" card-content">
+      <div class="card-content">
       Please let us know how we did with your support request. All feedback is appreciated
       to help us improve our offering!
     </div>
@@ -130,15 +145,15 @@
     <button class="card-submit">SUBMIT</button>
   </section>
 
-  <section style="display: none;">
-    <img src="./images/illustration-thank-you.svg" alt="">
-    <div>
+  <section class="card card-center" style="display: none;">
+    <img src="./images/illustration-thank-you.svg" alt="" class="img-thankyou">
+    <div class="card-primary-text">
       You selected
     </div>
-    <div>
+    <div class="card-title">
       Thank you!
     </div>
-    <div>
+    <div class="card-content">
       We appreciate you taking the time to give a rating. If you ever need more support,
       don’t hesitate to get in touch!
     </div>
