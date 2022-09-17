@@ -19,3 +19,8 @@ function onSubmit() {
   const ratingResult = document.querySelector("#rating-result");
   ratingResult.innerText = `You selected out ${rating} of 5`;
 }
+
+submitButton.addEventListener("click", onSubmit);
+ratingButtons.forEach((ratingButton) => {
+  ratingButton.addEventListener("click", onClick);
+});
