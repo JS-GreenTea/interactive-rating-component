@@ -14,7 +14,7 @@ body{
 }
 .container{
   width: 520px;
-  height: fit-content;
+  height: 550px;
   background-color : hsl(213, 19%, 18%);
   border-radius: 20px;
   margin: 5px;
@@ -36,13 +36,13 @@ body{
   height: 20px;
 }
 
-.question{
+.question, .thx-large{
   font-size: 40px;
   color: white;
   margin: 30px;
   font-weight: 700;
 }
-.introduction{
+.introduction, .thx-small{
   font-size: 15px;
   color:hsl(217, 12%, 63%);
   margin: 30px;
@@ -89,3 +89,31 @@ body{
   color: orange;
 }
 
+.thx-img{
+  margin: 80px 0 40px 0;
+}
+
+.selected-info{
+  width:250px;
+  height:35px;
+  background-color:hsl(217, 12%, 63%);
+  border-radius:20px;
+  color:orange;
+  justify-content:center;
+  line-height: 35px;
+  margin:auto;
+  padding: 0 15px;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+.paragraph{
+  text-align:center;
+}
+.after-container{
+  width: 520px;
+  height: 550px;
+  background-color : hsl(213, 19%, 18%);
+  border-radius: 20px;
+  margin: 5px;
+  text-align: center;
+}
